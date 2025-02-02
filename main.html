@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delightful handcrafted cheesecakes for any occasion">
+    <title>Чизкейки премиум</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <a href="#" class="logo">Чизкейки</a>
+                <div class="nav-links">
+                    <a href="#hero">Главная</a>
+                    <a href="#about">О нас</a>
+                    <a href="#cheesecakes">Чизкейки</a>
+                    <a href="#testimonials">Отзывы</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <!-- Cart Icon -->
+                <div class="cart-wrapper">
+                    <button class="cart-trigger" aria-label="Open shopping cart">
+                        <div class="cart-icon">🛒</div>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина</h2>
+                <button class="close-modal" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">
+                    <span>Итог:</span>
+                    <span class="total-amount">0.00р</span>
+                </div>
+                <button class="checkout-btn">Оформление заказа</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Чизкейки ручной работы</h1>
+                    <p class="hero-subtitle">Побалуйте себя настоящим блаженством с нашими чизкейками ручной работы премиум-класса</p>
+                    <a href="#cheesecakes" class="cta-button">Наше меню</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Наша история</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>С 2020 года мы готовим лучшие чизкейки из высококачественных ингредиентов по проверенным временем рецептам. Каждое блюдо готовится с любовью и вниманием к деталям.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <span class="feature-icon">🌟</span>
+                            <h3>Высочайшее качество</h3>
+                            <p>Лучшие ингредиенты для придания исключительного вкуса</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🌿</span>
+                            <h3>Натуральные ингридиенты</h3>
+                            <p>Не содержит искусственных консервантов</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🎨</span>
+                            <h3>Дизайн</h3>
+                            <p>Каждый Чизкейк - это настоящий шедевр</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cheesecakes Section -->
+        <section id="cheesecakes" class="cheesecakes">
+            <div class="container">
+                <h2 class="section-title">Наши фирменные чизкейки</h2>
+                <div class="cheesecakes-grid">
+                    <!-- Classic New York -->
+                    <div class="cheesecake-card" data-id="classic-ny">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50" 
+                                 alt="Classic New York Cheesecake"
+                                 loading="lazy">
+                        </div>
+                        <div class="cheesecake-info">
+                            <h3>Классический Чизкейк</h3>
+                            <p>Rich and creamy classic recipe</p>
+                            <div class="price-cart">
+                                <span class="price">1000р</span>
+                                <button class="add-to-cart-btn">
+                                    <span class="btn-text">Добавить корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Raspberry Swirl -->
+                    <div class="cheesecake-card" data-id="raspberry-swirl">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad" 
+                                 alt="Raspberry Swirl Cheesecake"
+                                 loading="lazy">
+                        </div>
+                        <div class="cheesecake-info">
+                            <h3>Малиновый чизкейк</h3>
+                            <p>Сладкое малиновое совершенство</p>
+                            <div class="price-cart">
+                                <span class="price">100р</span>
+                                <button class="add-to-cart-btn">
+                                    <span class="btn-text">Добавить в корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chocolate Dream -->
+                    <div class="cheesecake-card" data-id="chocolate-dream">
+                        <div class="image-container">
+                            <img src="photo.png" 
+                                 alt="Chocolate Dream Cheesecake"
+                                 loading="lazy">
+                        </div>
+                        <div class="cheesecake-info">
+                            <h3>Шоколадный Чизкейк</h3>
+                            <p>Побалуйте себя двойным шоколадом</p>
+                            <div class="price-cart">
+                                <span class="price">1200р</span>
+                                <button class="add-to-cart-btn">
+                                    <span class="btn-text">Добавить в корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Что говорят наши заказчики</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Лучший чизкейк, который я когда-либо пробовала! Просто божественно!"</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Анна</span>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Идеально подходит для особых случаев. Всем понравилось!"</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Михаил</span>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Исключительное качество и изумительный вкус. Закажу еще раз!"</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Элина</span>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Наши контакты</h2>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Сладкие наслаждения</h3>
+                    <p>Чизкейки ручной работы, приготовленные с любовью</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="#about">О нас</a>
+                    <a href="#cheesecakes">Чизкейки</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>📞 8 (983) 109 12 54</p>
+                    <p>📧 a8839344@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;Сладких наслаждений. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Item Template -->
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <div class="cart-item-image">
+                <img src="" alt="">
+            </div>
+            <div class="cart-item-info">
+                <h3 class="cart-item-title"></h3>
+                <div class="cart-item-price"></div>
+                <div class="cart-item-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="remove-item">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
+</body>
+</html>
